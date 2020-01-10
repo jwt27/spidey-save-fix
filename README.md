@@ -1,3 +1,5 @@
+### spidey-save-fix
+
 This is a patch for [The Amazing Spider-Man](https://www.mobygames.com/game/dos/amazing-spider-man), a puzzle/action platformer released in 1990 for IBM PC.
 
 The problem that this patch addresses, is that the game appears to support progress saves through checkpoints, but this is never saved to disk. Your progress is lost whenever you exit the game and boot it up again. While this is typical behaviour in early home computer games that load from tape, for a disk-based PC game from 1990 it is highly unusual. Given the length and difficulty of this game, it is next to impossible to finish in one session.  
