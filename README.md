@@ -9,11 +9,20 @@ To apply the patch, run:
 $ xdelta3 -d -s spidey-unpacked.exe spidey.xdelta spidey-patched.exe
 ````
 
-To enable the fix, create two empty (0 byte) files in the same directory: SPIDEY.SAV and HISCORE.DAT. When these files are removed again, the game behaves as it did originally; no progress or highscores are saved. To reset your progress or the high score list, clear out the respective file.
+To enable the fix, create two empty (0 byte) files in the same directory: `SPIDEY.SAV` and `HISCORE.DAT`. When these files are removed again, the game behaves as it did originally; no progress or highscores are saved. To reset your progress or the high score list, clear out the respective file.
 
-It is safe to accidentally start a new game without losing progress. The save file is only overwritten once you hit the first checkpoint.
+It is safe to accidentally start a new game without losing progress. The save file is only overwritten once you reach the first checkpoint.
 
 This patches the US release only. To determine whether you have the US or the international version:
 - International release starts with a language selection screen for the copy protection questions.
 - US release has a fifth video mode (16-color Tandy).
 - US release shows a comic strip intro sequence on startup.
+
+The original packed EXE file should have one of the following checksums:  
+````
+$ sha256sum SPIDEY.EXE # original release
+10835b8f5e17a73b29a7ed9976698148ce3cdffa561b672ed0c60c4a35dd25d3 *SPIDEY.EXE
+
+$ sha256sum SPIDEY.EXE # cracked version
+14d09a7e8159445a405da8ce3ab7d232a72efe9849264646d83dcca361ae2515 *SPIDEY.EXE
+````
